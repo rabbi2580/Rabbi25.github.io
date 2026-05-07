@@ -2,16 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarif Ul Haider Rabbi | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <title>Tarif Ul Haider Rabbi - Portfolio</title>
 
     <style>
         * {
@@ -25,89 +19,65 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background: #020617;
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle,
-                    rgba(6, 182, 212, 0.18),
-                    transparent 70%);
-            top: -200px;
-            right: -200px;
-            z-index: -1;
-        }
-
-        body::after {
-            content: "";
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle,
-                    rgba(139, 92, 246, 0.18),
-                    transparent 70%);
-            bottom: -250px;
-            left: -200px;
-            z-index: -1;
-        }
-
         .container {
-            max-width: 1250px;
-            margin: auto;
-            padding: 0 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* ================= HEADER ================= */
 
         header {
-            position: fixed;
-            width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
             top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(14px);
-            background: rgba(2, 6, 23, 0.55);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+            animation: slideDown 0.6s ease-out;
         }
 
-        .navbar {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
 
         .logo {
-            font-size: 34px;
+            font-size: 28px;
             font-weight: 800;
-            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         nav a {
             color: #cbd5e1;
             text-decoration: none;
-            margin-left: 35px;
-            font-size: 15px;
-            position: relative;
+            margin-left: 30px;
             transition: 0.3s;
+            font-size: 14px;
+            position: relative;
         }
 
         nav a::after {
             content: "";
             position: absolute;
-            left: 0;
-            bottom: -8px;
             width: 0%;
             height: 2px;
-            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
-            transition: 0.4s;
+            background: #06b6d4;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
         }
 
         nav a:hover::after {
@@ -115,17 +85,16 @@
         }
 
         nav a:hover {
-            color: white;
+            color: #06b6d4;
         }
 
         /* ================= HERO ================= */
 
         .hero {
-            min-height: 100vh;
+            padding: 80px 0;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
@@ -133,43 +102,48 @@
             align-items: center;
             justify-content: space-between;
             gap: 70px;
-            width: 100%;
-            padding-top: 120px;
         }
 
         .hero-text {
             flex: 1;
-            animation: fadeUp 1s ease;
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        .hero-tag {
-            display: inline-block;
-            padding: 10px 18px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 50px;
-            margin-bottom: 24px;
-            color: #94a3b8;
-            background: rgba(255, 255, 255, 0.03);
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .profile-pic {
+            width: 340px;
+            height: 440px;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 5px solid #06b6d4;
+            box-shadow: 0 15px 45px rgba(6, 182, 212, 0.35);
+            transition: 0.4s ease;
+        }
+
+        .profile-pic:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 55px rgba(6, 182, 212, 0.55);
         }
 
         .hero-title {
-            font-size: 74px;
-            line-height: 1.05;
-            margin-bottom: 22px;
+            font-size: 60px;
             font-weight: 800;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg,
-                    #06b6d4,
-                    #8b5cf6,
-                    #ec4899);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: 22px;
+            font-size: 24px;
             color: #94a3b8;
             margin-bottom: 25px;
         }
@@ -178,167 +152,71 @@
             color: #cbd5e1;
             line-height: 1.9;
             font-size: 16px;
+            margin-bottom: 35px;
             max-width: 650px;
-            margin-bottom: 40px;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 34px;
-            border-radius: 14px;
+        .cta-button {
+            display: inline-block;
+            padding: 14px 34px;
+            background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+            color: white;
             text-decoration: none;
+            border-radius: 12px;
             font-weight: 600;
-            transition: 0.35s;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg,
-                    #06b6d4,
-                    #8b5cf6);
-            color: white;
-            box-shadow: 0 12px 35px rgba(6, 182, 212, 0.3);
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(6, 182, 212, 0.5);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-5px);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: white;
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .image-card {
-            position: relative;
-            padding: 18px;
-            border-radius: 40px;
-            background: linear-gradient(135deg,
-                    rgba(6, 182, 212, 0.4),
-                    rgba(139, 92, 246, 0.4));
-            box-shadow: 0 25px 70px rgba(6, 182, 212, 0.2);
-        }
-
-        .profile-pic {
-            width: 370px;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 28px;
-            display: block;
-        }
-
-        .floating-card {
-            position: absolute;
-            padding: 16px 22px;
-            border-radius: 20px;
-            backdrop-filter: blur(12px);
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-        }
-
-        .card-top {
-            top: 50px;
-            left: -30px;
-        }
-
-        .card-bottom {
-            bottom: 40px;
-            right: -30px;
-        }
-
-        .floating-card h4 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .floating-card p {
-            font-size: 13px;
-            color: #cbd5e1;
-        }
-
-        /* ================= SECTION ================= */
+        /* ================= SECTIONS ================= */
 
         section {
-            padding: 120px 0;
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.15);
         }
 
         .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 50px;
             text-align: center;
-            font-size: 54px;
-            margin-bottom: 18px;
-            font-weight: 800;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #94a3b8;
-            max-width: 700px;
-            margin: auto auto 70px;
-            line-height: 1.8;
+            color: #f1f5f9;
         }
 
         /* ================= SKILLS ================= */
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit,
-                    minmax(260px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
         }
 
         .skill-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 26px;
-            padding: 35px;
-            transition: 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background: rgba(6, 182, 212, 0.08);
-            border-radius: 50%;
-            top: -70px;
-            right: -70px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.35s ease;
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
         }
 
         .skill-card:hover {
-            transform: translateY(-12px);
-            border-color: rgba(6, 182, 212, 0.35);
-            box-shadow: 0 20px 50px rgba(6, 182, 212, 0.15);
+            transform: translateY(-10px);
+            border-color: #06b6d4;
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.18);
         }
 
-        .skill-icon {
-            font-size: 42px;
-            margin-bottom: 18px;
-        }
-
-        .skill-title {
-            font-size: 24px;
-            margin-bottom: 18px;
+        .skill-category {
+            font-size: 18px;
+            font-weight: 700;
+            color: #06b6d4;
+            margin-bottom: 20px;
         }
 
         .skill-items {
@@ -348,74 +226,80 @@
         }
 
         .skill-badge {
-            padding: 10px 16px;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #cbd5e1;
-            font-size: 14px;
+            background: rgba(6, 182, 212, 0.15);
+            color: #06b6d4;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
         }
 
         /* ================= PROJECTS ================= */
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit,
-                    minmax(330px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 28px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 18px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: 0.4s;
+            transition: 0.35s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+            transform: translateY(-10px);
+            border-color: #06b6d4;
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.18);
         }
 
-        .project-image {
-            height: 200px;
+        .project-header {
+            height: 120px;
+            background: linear-gradient(
+                135deg,
+                rgba(6, 182, 212, 0.2),
+                rgba(14, 165, 233, 0.2)
+            );
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 70px;
-            background: linear-gradient(135deg,
-                    rgba(6, 182, 212, 0.18),
-                    rgba(139, 92, 246, 0.18));
+            font-size: 42px;
         }
 
         .project-content {
-            padding: 28px;
+            padding: 25px;
         }
 
         .project-title {
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
         .project-desc {
             color: #cbd5e1;
+            font-size: 14px;
             line-height: 1.8;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .project-tag {
-            padding: 8px 14px;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #94a3b8;
-            font-size: 13px;
+            background: rgba(14, 165, 233, 0.15);
+            color: #0ea5e9;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
         }
 
         .project-link {
@@ -424,103 +308,84 @@
             font-weight: 600;
         }
 
+        .project-link:hover {
+            color: #38bdf8;
+        }
+
         /* ================= EDUCATION ================= */
 
-        .education-card {
-            max-width: 850px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 30px;
-            padding: 45px;
-            text-align: center;
+        .education {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 5px solid #06b6d4;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.35s ease;
         }
 
-        .education-card h3 {
-            font-size: 34px;
-            margin-bottom: 12px;
+        .education:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.18);
         }
 
-        .education-card p {
-            color: #94a3b8;
+        .edu-school {
+            color: #06b6d4;
+            font-weight: 700;
             margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .edu-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .edu-meta {
+            color: #94a3b8;
+            font-size: 14px;
         }
 
         /* ================= CONTACT ================= */
 
-        .contact-box {
-            max-width: 900px;
-            margin: auto;
-            padding: 60px;
-            border-radius: 32px;
-            background: linear-gradient(135deg,
-                    rgba(6, 182, 212, 0.12),
-                    rgba(139, 92, 246, 0.12));
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        #contact {
             text-align: center;
-        }
-
-        .contact-box h2 {
-            font-size: 52px;
-            margin-bottom: 20px;
-        }
-
-        .contact-box p {
-            color: #cbd5e1;
-            line-height: 1.8;
-            margin-bottom: 35px;
         }
 
         .contact-links {
             display: flex;
             justify-content: center;
+            gap: 25px;
             flex-wrap: wrap;
-            gap: 18px;
+            margin-top: 30px;
         }
 
         .contact-link {
-            padding: 15px 28px;
-            border-radius: 16px;
+            color: #06b6d4;
             text-decoration: none;
-            color: white;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: 0.35s;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
         .contact-link:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.12);
+            color: #38bdf8;
+            transform: translateY(-3px);
         }
 
         /* ================= FOOTER ================= */
 
-        footer {
-            padding: 40px 0;
+        .footer {
+            padding: 35px 0;
             text-align: center;
             color: #64748b;
         }
 
-        /* ================= ANIMATION ================= */
+        /* ================= ANIMATIONS ================= */
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-18px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        @keyframes fadeUp {
+        @keyframes slideDown {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(-20px);
             }
 
             to {
@@ -529,54 +394,90 @@
             }
         }
 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skill-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .skill-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .skill-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .skill-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
         /* ================= RESPONSIVE ================= */
 
-        @media(max-width: 1000px) {
+        @media (max-width: 900px) {
 
             .hero-content {
                 flex-direction: column-reverse;
                 text-align: center;
             }
 
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-desc {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-title {
-                font-size: 54px;
-            }
-        }
-
-        @media(max-width: 768px) {
-
-            .profile-pic {
-                width: 280px;
-                height: 380px;
+            .hero-text {
+                text-align: center;
             }
 
             .hero-title {
                 font-size: 42px;
             }
 
-            .section-title {
-                font-size: 38px;
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .profile-pic {
+                width: 260px;
+                height: 340px;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
             }
 
             nav {
-                display: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            .floating-card {
-                display: none;
+            .hero-title {
+                font-size: 34px;
             }
 
-            .contact-box {
-                padding: 40px 25px;
+            .section-title {
+                font-size: 32px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
@@ -587,87 +488,66 @@
     <!-- ================= HEADER ================= -->
 
     <header>
+        <div class="container">
 
-        <div class="container navbar">
+            <div class="header-content">
 
-            <div class="logo">TR</div>
+                <div class="logo">TR</div>
 
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-            </nav>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </nav>
 
+            </div>
         </div>
-
     </header>
 
     <!-- ================= HERO ================= -->
 
     <section class="hero" id="about">
 
-        <div class="container hero-content">
+        <div class="container">
 
-            <div class="hero-text">
+            <div class="hero-content">
 
-                <div class="hero-tag">
-                    ✨ AI Developer • ML Enthusiast • Web Developer
-                </div>
+                <!-- LEFT TEXT -->
 
-                <h1 class="hero-title">
-                    Building
-                    <span class="gradient-text">
-                        Intelligent
-                    </span>
-                    Digital Experiences.
-                </h1>
+                <div class="hero-text">
 
-                <p class="hero-subtitle">
-                    Tarif Ul Haider Rabbi
-                </p>
+                    <h1 class="hero-title">
+                        Tarif Ul Haider Rabbi
+                    </h1>
 
-                <p class="hero-desc">
-                    Passionate Computer Science undergraduate focused on machine
-                    learning, intelligent systems, web development, and
-                    data-driven innovation. I create modern solutions that
-                    combine creativity with technology.
-                </p>
+                    <p class="hero-subtitle">
+                        Computer Science Undergraduate | Information Systems
+                    </p>
 
-                <div class="hero-buttons">
+                    <p class="hero-desc">
+                        Versatile developer passionate about building intelligent
+                        solutions. Experienced in machine learning, web development,
+                        and data science. Currently pursuing my final semester at
+                        AIUB with a focus on innovative problem-solving.
+                    </p>
 
-                    <a href="mailto:haiderrabbi06@gmail.com"
-                        class="btn btn-primary">
-                        Contact Me
-                    </a>
-
-                    <a href="#projects"
-                        class="btn btn-secondary">
-                        View Projects
+                    <a href="mailto:haiderrabbi06@gmail.com" class="cta-button">
+                        Get In Touch
                     </a>
 
                 </div>
 
-            </div>
+                <!-- RIGHT IMAGE -->
 
-            <div class="hero-image">
+                <div class="hero-image">
 
-                <div class="image-card">
-
-                    <img src="rabbi.jpeg"
+                    <img
+                        src="rabbi.jpeg"
                         alt="Tarif Ul Haider Rabbi"
-                        class="profile-pic">
-
-                    <div class="floating-card card-top">
-                        <h4>Machine Learning</h4>
-                        <p>AI & Intelligent Systems</p>
-                    </div>
-
-                    <div class="floating-card card-bottom">
-                        <h4>Full Stack</h4>
-                        <p>Modern Web Development</p>
-                    </div>
+                        class="profile-pic"
+                    />
 
                 </div>
 
@@ -687,20 +567,13 @@
                 Technical Skills
             </h2>
 
-            <p class="section-subtitle">
-                Technologies and tools I use to create powerful
-                digital experiences.
-            </p>
-
             <div class="skills-grid">
 
                 <div class="skill-card">
 
-                    <div class="skill-icon">🌐</div>
-
-                    <h3 class="skill-title">
-                        Web Development
-                    </h3>
+                    <div class="skill-category">
+                        🌐 Web Development
+                    </div>
 
                     <div class="skill-items">
                         <span class="skill-badge">HTML</span>
@@ -713,16 +586,14 @@
 
                 <div class="skill-card">
 
-                    <div class="skill-icon">🤖</div>
-
-                    <h3 class="skill-title">
-                        AI & Machine Learning
-                    </h3>
+                    <div class="skill-category">
+                        🤖 AI & ML
+                    </div>
 
                     <div class="skill-items">
                         <span class="skill-badge">Python</span>
-                        <span class="skill-badge">TensorFlow</span>
                         <span class="skill-badge">Scikit-learn</span>
+                        <span class="skill-badge">TensorFlow</span>
                         <span class="skill-badge">NLP</span>
                     </div>
 
@@ -730,16 +601,14 @@
 
                 <div class="skill-card">
 
-                    <div class="skill-icon">💻</div>
-
-                    <h3 class="skill-title">
-                        Programming
-                    </h3>
+                    <div class="skill-category">
+                        💻 Programming
+                    </div>
 
                     <div class="skill-items">
+                        <span class="skill-badge">Python</span>
                         <span class="skill-badge">C++</span>
                         <span class="skill-badge">Java</span>
-                        <span class="skill-badge">Python</span>
                         <span class="skill-badge">C#</span>
                     </div>
 
@@ -747,11 +616,9 @@
 
                 <div class="skill-card">
 
-                    <div class="skill-icon">📊</div>
-
-                    <h3 class="skill-title">
-                        Data & Tools
-                    </h3>
+                    <div class="skill-category">
+                        📊 Data & Tools
+                    </div>
 
                     <div class="skill-items">
                         <span class="skill-badge">Pandas</span>
@@ -778,16 +645,11 @@
                 Featured Projects
             </h2>
 
-            <p class="section-subtitle">
-                A collection of projects combining artificial intelligence,
-                software engineering, and modern UI design.
-            </p>
-
             <div class="projects-grid">
 
                 <div class="project-card">
 
-                    <div class="project-image">
+                    <div class="project-header">
                         🤖
                     </div>
 
@@ -798,20 +660,18 @@
                         </h3>
 
                         <p class="project-desc">
-                            Intelligent agriculture assistant capable of
-                            plant disease detection, farming suggestions,
-                            and multilingual interaction.
+                            Intelligent agriculture assistant using machine learning
+                            and NLP for plant disease detection and farming guidance.
                         </p>
 
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
                             <span class="project-tag">TensorFlow</span>
-                            <span class="project-tag">Telegram Bot</span>
+                            <span class="project-tag">NLP</span>
                         </div>
 
-                        <a href="#"
-                            class="project-link">
-                            View Details →
+                        <a href="#" class="project-link">
+                            View Project →
                         </a>
 
                     </div>
@@ -820,19 +680,19 @@
 
                 <div class="project-card">
 
-                    <div class="project-image">
+                    <div class="project-header">
                         🌐
                     </div>
 
                     <div class="project-content">
 
                         <h3 class="project-title">
-                            Smart Portfolio Website
+                            Portfolio Website
                         </h3>
 
                         <p class="project-desc">
-                            Modern responsive portfolio website with smooth
-                            animation, glassmorphism design, and futuristic UI.
+                            Modern responsive portfolio website with animations,
+                            responsive design, and elegant UI.
                         </p>
 
                         <div class="project-tags">
@@ -841,42 +701,8 @@
                             <span class="project-tag">JavaScript</span>
                         </div>
 
-                        <a href="#"
-                            class="project-link">
-                            View Details →
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-
-                    <div class="project-image">
-                        📈
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3 class="project-title">
-                            Data Analytics System
-                        </h3>
-
-                        <p class="project-desc">
-                            Interactive analytics platform for data
-                            visualization, prediction, and business
-                            intelligence reporting.
-                        </p>
-
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Pandas</span>
-                            <span class="project-tag">Machine Learning</span>
-                        </div>
-
-                        <a href="#"
-                            class="project-link">
-                            View Details →
+                        <a href="#" class="project-link">
+                            View Project →
                         </a>
 
                     </div>
@@ -899,23 +725,19 @@
                 Education
             </h2>
 
-            <div class="education-card">
+            <div class="education">
 
-                <h3>
-                    American International University-Bangladesh
-                </h3>
+                <div class="edu-school">
+                    American International University-Bangladesh (AIUB)
+                </div>
 
-                <p>
+                <div class="edu-title">
                     BSc in Computer Science & Engineering
-                </p>
+                </div>
 
-                <p>
-                    Major: Information Systems
-                </p>
-
-                <p>
-                    Final Semester Student
-                </p>
+                <div class="edu-meta">
+                    Major: Information Systems | Final Semester
+                </div>
 
             </div>
 
@@ -929,42 +751,39 @@
 
         <div class="container">
 
-            <div class="contact-box">
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
 
-                <h2>
-                    Let's Work Together
-                </h2>
+            <p style="color:#cbd5e1; margin-bottom:20px;">
+                I'm always open to interesting projects and collaborations.
+            </p>
 
-                <p>
-                    Open to collaborations, freelance opportunities,
-                    and innovative AI projects.
-                </p>
+            <div class="contact-links">
 
-                <div class="contact-links">
+                <a href="mailto:haiderrabbi06@gmail.com" class="contact-link">
+                    📧 Email
+                </a>
 
-                    <a href="mailto:haiderrabbi06@gmail.com"
-                        class="contact-link">
-                        📧 Email
-                    </a>
+                <a href="tel:+8801882782736" class="contact-link">
+                    📞 Phone
+                </a>
 
-                    <a href="tel:+8801882782736"
-                        class="contact-link">
-                        📞 Phone
-                    </a>
+                <a
+                    href="https://github.com/rabbi2580"
+                    target="_blank"
+                    class="contact-link"
+                >
+                    💻 GitHub
+                </a>
 
-                    <a href="https://github.com/rabbi2580"
-                        target="_blank"
-                        class="contact-link">
-                        💻 GitHub
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/tarif-ul-haider-rabbi/"
-                        target="_blank"
-                        class="contact-link">
-                        💼 LinkedIn
-                    </a>
-
-                </div>
+                <a
+                    href="https://www.linkedin.com/in/tarif-ul-haider-rabbi/"
+                    target="_blank"
+                    class="contact-link"
+                >
+                    💼 LinkedIn
+                </a>
 
             </div>
 
@@ -974,10 +793,14 @@
 
     <!-- ================= FOOTER ================= -->
 
-    <footer>
+    <footer class="footer">
 
         <div class="container">
-            © 2025 Tarif Ul Haider Rabbi • Crafted with Passion & Creativity
+
+            <p>
+                © 2025 Tarif Ul Haider Rabbi | Based in Dhaka, Bangladesh
+            </p>
+
         </div>
 
     </footer>
