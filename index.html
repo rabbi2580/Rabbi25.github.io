@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Tarif Ul Haider Rabbi - CSE graduate focused on machine learning, NLP and LLM fine-tuning." />
 
     <title>Tarif Ul Haider Rabbi - Portfolio</title>
 
@@ -21,6 +22,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background-attachment: fixed;
             color: #e2e8f0;
             line-height: 1.6;
             overflow-x: hidden;
@@ -131,6 +133,27 @@
             box-shadow: 0 20px 55px rgba(6, 182, 212, 0.55);
         }
 
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.35);
+            color: #4ade80;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4ade80;
+        }
+
         .hero-title {
             font-size: 60px;
             font-weight: 800;
@@ -156,6 +179,12 @@
             max-width: 650px;
         }
 
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         .cta-button {
             display: inline-block;
             padding: 14px 34px;
@@ -173,6 +202,19 @@
             box-shadow: 0 12px 35px rgba(6, 182, 212, 0.5);
         }
 
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid #06b6d4;
+            color: #06b6d4;
+            box-shadow: none;
+            padding: 12px 32px;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(6, 182, 212, 0.12);
+            box-shadow: none;
+        }
+
         /* ================= SECTIONS ================= */
 
         section {
@@ -186,6 +228,57 @@
             margin-bottom: 50px;
             text-align: center;
             color: #f1f5f9;
+        }
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-left: 5px solid #06b6d4;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.35s ease;
+        }
+
+        .experience:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.18);
+        }
+
+        .exp-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .exp-role {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .exp-date {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .exp-company {
+            color: #06b6d4;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .exp-list {
+            padding-left: 20px;
+            color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .exp-list li {
+            margin-bottom: 8px;
         }
 
         /* ================= SKILLS ================= */
@@ -248,6 +341,8 @@
             border-radius: 18px;
             overflow: hidden;
             transition: 0.35s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -271,6 +366,9 @@
 
         .project-content {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .project-title {
@@ -284,6 +382,7 @@
             font-size: 14px;
             line-height: 1.8;
             margin-bottom: 18px;
+            flex: 1;
         }
 
         .project-tags {
@@ -312,7 +411,7 @@
             color: #38bdf8;
         }
 
-        /* ================= EDUCATION ================= */
+        /* ================= EDUCATION & CERTS ================= */
 
         .education {
             background: rgba(15, 23, 42, 0.85);
@@ -321,6 +420,7 @@
             border-radius: 16px;
             padding: 30px;
             transition: 0.35s ease;
+            margin-bottom: 25px;
         }
 
         .education:hover {
@@ -406,21 +506,12 @@
             }
         }
 
-        .skill-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .skill-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .skill-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .skill-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
+        .skill-card:nth-child(1) { animation-delay: 0.1s; }
+        .skill-card:nth-child(2) { animation-delay: 0.2s; }
+        .skill-card:nth-child(3) { animation-delay: 0.3s; }
+        .skill-card:nth-child(4) { animation-delay: 0.4s; }
+        .skill-card:nth-child(5) { animation-delay: 0.5s; }
+        .skill-card:nth-child(6) { animation-delay: 0.6s; }
 
         /* ================= RESPONSIVE ================= */
 
@@ -433,6 +524,15 @@
 
             .hero-text {
                 text-align: center;
+            }
+
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
             }
 
             .hero-title {
@@ -467,6 +567,10 @@
                 justify-content: center;
             }
 
+            nav a {
+                margin: 0 8px;
+            }
+
             .hero-title {
                 font-size: 34px;
             }
@@ -489,13 +593,13 @@
 
     <header>
         <div class="container">
-
             <div class="header-content">
 
                 <div class="logo">TR</div>
 
                 <nav>
                     <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#education">Education</a>
@@ -509,58 +613,88 @@
     <!-- ================= HERO ================= -->
 
     <section class="hero" id="about">
-
         <div class="container">
-
             <div class="hero-content">
 
-                <!-- LEFT TEXT -->
-
                 <div class="hero-text">
+
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Open to entry-level AI/ML roles
+                    </div>
 
                     <h1 class="hero-title">
                         Tarif Ul Haider Rabbi
                     </h1>
 
                     <p class="hero-subtitle">
-                        Computer Science Undergraduate | Information Systems
+                        CSE Graduate | AI &amp; Machine Learning Engineer
                     </p>
 
                     <p class="hero-desc">
-                        Versatile developer passionate about building intelligent
-                        solutions. Experienced in machine learning, web development,
-                        and data science. Currently pursuing my final semester at
-                        AIUB with a focus on innovative problem-solving.
+                        Computer Science graduate from AIUB (Information Systems major)
+                        focused on machine learning, NLP and LLMs. I have fine-tuned
+                        open models such as Gemma and Qwen, worked on speech recognition
+                        (ASR) models, and built Bengali NLP and computer vision projects
+                        end to end, from data preprocessing to deployment.
                     </p>
 
-                    <a href="mailto:haiderrabbi06@gmail.com" class="cta-button">
-                        Get In Touch
-                    </a>
+                    <div class="hero-buttons">
+                        <a href="mailto:haiderrabbi06@gmail.com" class="cta-button">
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="cta-button cta-secondary">
+                            View Projects
+                        </a>
+                    </div>
 
                 </div>
 
-                <!-- RIGHT IMAGE -->
-
                 <div class="hero-image">
-
                     <img
                         src="rabbi.jpeg"
                         alt="Tarif Ul Haider Rabbi"
                         class="profile-pic"
                     />
-
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+        <div class="container">
+
+            <h2 class="section-title">
+                Experience
+            </h2>
+
+            <div class="experience">
+
+                <div class="exp-top">
+                    <div class="exp-role">Support Engineer Intern</div>
+                    <div class="exp-date">Jun 2026 – Sep 2026 · Dhaka, Bangladesh</div>
+                </div>
+
+                <div class="exp-company">Innovative Techworks Group</div>
+
+                <ul class="exp-list">
+                    <li>Trained and fine-tuned LLMs, experimenting with pre-trained models including Gemma and Qwen.</li>
+                    <li>Worked on ASR models through audio annotation, model training and fine-tuning.</li>
+                    <li>Developed and maintained backend features and APIs for EDUCRM using Django and Python.</li>
+                    <li>Built an ML-based location solution using the Google Maps Places API, with hands-on exposure to AWS, Azure and Cloudflare.</li>
+                </ul>
 
             </div>
 
         </div>
-
     </section>
 
     <!-- ================= SKILLS ================= -->
 
     <section id="skills">
-
         <div class="container">
 
             <h2 class="section-title">
@@ -570,351 +704,386 @@
             <div class="skills-grid">
 
                 <div class="skill-card">
-
-                    <div class="skill-category">
-                        🌐 Web Development
-                    </div>
-
+                    <div class="skill-category">🤖 AI &amp; Machine Learning</div>
                     <div class="skill-items">
-                        <span class="skill-badge">HTML</span>
-                        <span class="skill-badge">CSS</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">PHP</span>
-                    </div>
-
-                </div>
-
-                <div class="skill-card">
-
-                    <div class="skill-category">
-                        🤖 AI & ML
-                    </div>
-
-                    <div class="skill-items">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">Scikit-learn</span>
-                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">Machine Learning</span>
+                        <span class="skill-badge">Deep Learning</span>
                         <span class="skill-badge">NLP</span>
+                        <span class="skill-badge">Computer Vision</span>
+                        <span class="skill-badge">LLMs</span>
+                        <span class="skill-badge">RAG</span>
+                        <span class="skill-badge">Model Fine-tuning</span>
+                        <span class="skill-badge">Transfer Learning</span>
                     </div>
-
                 </div>
 
                 <div class="skill-card">
-
-                    <div class="skill-category">
-                        💻 Programming
-                    </div>
-
+                    <div class="skill-category">🧰 ML Tools</div>
                     <div class="skill-items">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">C++</span>
-                        <span class="skill-badge">Java</span>
-                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">Scikit-learn</span>
+                        <span class="skill-badge">Hugging Face</span>
+                        <span class="skill-badge">OpenCV</span>
+                        <span class="skill-badge">Sentence-Transformers</span>
+                        <span class="skill-badge">Gradio</span>
                     </div>
-
                 </div>
 
                 <div class="skill-card">
-
-                    <div class="skill-category">
-                        📊 Data & Tools
-                    </div>
-
+                    <div class="skill-category">📊 Data</div>
                     <div class="skill-items">
                         <span class="skill-badge">Pandas</span>
                         <span class="skill-badge">NumPy</span>
+                        <span class="skill-badge">Matplotlib</span>
+                        <span class="skill-badge">EDA</span>
+                        <span class="skill-badge">Feature Engineering</span>
                         <span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">Arduino</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">Oracle</span>
                     </div>
+                </div>
 
+                <div class="skill-card">
+                    <div class="skill-category">💻 Programming</div>
+                    <div class="skill-items">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-category">🌐 Web Development</div>
+                    <div class="skill-items">
+                        <span class="skill-badge">Django</span>
+                        <span class="skill-badge">FastAPI</span>
+                        <span class="skill-badge">Flask</span>
+                        <span class="skill-badge">REST APIs</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Next.js</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">PHP</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-category">☁️ Cloud, DevOps &amp; Other</div>
+                    <div class="skill-items">
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">Azure</span>
+                        <span class="skill-badge">Cloudflare</span>
+                        <span class="skill-badge">Git &amp; GitHub</span>
+                        <span class="skill-badge">Arduino</span>
+                        <span class="skill-badge">Figma</span>
+                    </div>
                 </div>
 
             </div>
 
         </div>
-
     </section>
 
     <!-- ================= PROJECTS ================= -->
 
-    <!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Featured Projects
-        </h2>
-
-        <div class="projects-grid">
-
-            <!-- Project 1 -->
-
-            <div class="project-card">
-
-                <div class="project-header">
-                    ❤️
-                </div>
-
-                <div class="project-content">
-
-                    <h3 class="project-title">
-                        Heart Failure Detection
-                    </h3>
-
-                    <p class="project-desc">
-                        Machine learning project focused on heart failure prediction
-                        using data preprocessing, feature engineering,
-                        classification models, confusion matrix evaluation,
-                        and performance analysis.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">Machine Learning</span>
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Scikit-learn</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/rabbi2580/Machine-Learning--Heart-Failure-Disease"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 2 -->
-
-            <div class="project-card">
-
-                <div class="project-header">
-                    🧠
-                </div>
-
-                <div class="project-content">
-
-                    <h3 class="project-title">
-                        Brain Tumor Detection
-                    </h3>
-
-                    <p class="project-desc">
-                        Computer vision based MRI brain tumor detection
-                        system using CNN architecture with ROC curve analysis,
-                        accuracy evaluation, and confusion matrix visualization.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">CNN</span>
-                        <span class="project-tag">Deep Learning</span>
-                        <span class="project-tag">Computer Vision</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/rabbi2580/Brain-Tumor-MRI-Detection-using-CNN-model"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 3 -->
-
-            <div class="project-card">
-
-                <div class="project-header">
-                    🩺
-                </div>
-
-                <div class="project-content">
-
-                    <h3 class="project-title">
-                        Diabetes Prediction
-                    </h3>
-
-                    <p class="project-desc">
-                        Machine learning based diabetes prediction system
-                        developed with Hugging Face and Gradio integration
-                        featuring feature engineering and classification models.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">Gradio</span>
-                        <span class="project-tag">Hugging Face</span>
-                        <span class="project-tag">ML</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/rabbi2580/Diabetes-prediction"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 4 -->
-
-            <div class="project-card">
-
-                <div class="project-header">
-                    🏙️
-                </div>
-
-                <div class="project-content">
-
-                    <h3 class="project-title">
-                        Smart City Corporation System
-                    </h3>
-
-                    <p class="project-desc">
-                        Smart city management platform with authentication,
-                        issue reporting, property browsing, location search,
-                        and MVC architecture using PHP and JavaScript.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">MVC</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/rabbi2580/Smart-City-Hub_webtech"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 5 -->
-
-            <div class="project-card">
-
-                <div class="project-header">
-                    📚
-                </div>
-
-                <div class="project-content">
-
-                    <h3 class="project-title">
-                        Online Book Shop
-                    </h3>
-
-                    <p class="project-desc">
-                        C# based online bookstore where users can
-                        buy or rent books with a clean user-friendly system.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">C#</span>
-                        <span class="project-tag">Desktop App</span>
-                        <span class="project-tag">OOP</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/rabbi2580/Online-Book-Shop-Buy-Rent-Book-"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 6 -->
-
-            <div class="project-card">
-
-                <div class="project-header">
-                    🎓
-                </div>
-
-                <div class="project-content">
-
-                    <h3 class="project-title">
-                        Student Record Management
-                    </h3>
-
-                    <p class="project-desc">
-                        Java based student information management system
-                        for storing and managing academic records efficiently.
-                    </p>
-
-                    <div class="project-tags">
-                        <span class="project-tag">Java</span>
-                        <span class="project-tag">Database</span>
-                        <span class="project-tag">OOP</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/rabbi2580/Student-Record-System"
-                        target="_blank"
-                        class="project-link"
-                    >
-                        View Project →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-    <!-- ================= EDUCATION ================= -->
-
-    <section id="education">
-
+    <section id="projects">
         <div class="container">
 
             <h2 class="section-title">
-                Education
+                Featured Projects
             </h2>
 
-            <div class="education">
+            <div class="projects-grid">
 
-                <div class="edu-school">
-                    American International University-Bangladesh (AIUB)
+                <!-- Project 1: AgriBot -->
+
+                <div class="project-card">
+                    <div class="project-header">🌾</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">AgriBot – Bengali Agricultural Assistant</h3>
+
+                        <p class="project-desc">
+                            Bengali AI chatbot that uses NLP and Sentence-BERT semantic
+                            search to answer questions on crops, diseases, pests,
+                            fertilizers and irrigation. Integrated with Flask and
+                            WhatsApp for real-world use.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Sentence-BERT</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">WhatsApp</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/rabbi2580/AgriBot_BD"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
                 </div>
 
-                <div class="edu-title">
-                    BSc in Computer Science & Engineering
+                <!-- Project 2: Crop disease classification -->
+                <!-- TODO: add your Kaggle / GitHub link below once it is public -->
+
+                <div class="project-card">
+                    <div class="project-header">🍃</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Crop Disease Classification</h3>
+
+                        <p class="project-desc">
+                            Lightweight hybrid CNN + Transformer model that classifies
+                            24 fruit and leaf disease classes from the ABCGMP dataset,
+                            built as a compact alternative to heavier pre-trained models.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">PyTorch</span>
+                            <span class="project-tag">CNN</span>
+                            <span class="project-tag">Transformer</span>
+                            <span class="project-tag">Computer Vision</span>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="edu-meta">
-                    Major: Information Systems | Final Semester
+                <!-- Project 3: Fake news detection -->
+                <!-- TODO: add a link (GitHub / paper) if you have one -->
+
+                <div class="project-card">
+                    <div class="project-header">📰</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Explainable Fake News Detection</h3>
+
+                        <p class="project-desc">
+                            Course research project on detecting fake news with
+                            explainable machine learning on the ISOT dataset, written up
+                            as an IEEE-format paper.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Explainable AI</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 4: Brain tumor -->
+
+                <div class="project-card">
+                    <div class="project-header">🧠</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Brain Tumor Detection</h3>
+
+                        <p class="project-desc">
+                            Computer vision based MRI brain tumor detection system using
+                            a CNN, evaluated with accuracy, ROC curve and confusion
+                            matrix.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">CNN</span>
+                            <span class="project-tag">Deep Learning</span>
+                            <span class="project-tag">Computer Vision</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/rabbi2580/Brain-Tumor-MRI-Detection-using-CNN-model"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Project 5: Heart failure -->
+
+                <div class="project-card">
+                    <div class="project-header">❤️</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Heart Failure Detection</h3>
+
+                        <p class="project-desc">
+                            Machine learning project predicting heart failure using data
+                            preprocessing, feature engineering and classification models,
+                            evaluated with accuracy, precision and confusion matrix.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/rabbi2580/Machine-Learning--Heart-Failure-Disease"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Project 6: Diabetes -->
+
+                <div class="project-card">
+                    <div class="project-header">🩺</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Diabetes Prediction</h3>
+
+                        <p class="project-desc">
+                            Diabetes prediction app built with feature engineering and
+                            classification models, deployed with Hugging Face and Gradio.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">Gradio</span>
+                            <span class="project-tag">Hugging Face</span>
+                            <span class="project-tag">ML</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/rabbi2580/Diabetes-prediction"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Project 7: Smart City -->
+
+                <div class="project-card">
+                    <div class="project-header">🏙️</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Smart City Corporation System</h3>
+
+                        <p class="project-desc">
+                            Web platform with registration and login, password
+                            management, property browsing, online issue reporting and
+                            location-based search, built with an MVC workflow in PHP and
+                            JavaScript.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">MVC</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/rabbi2580/Smart-City-Hub_webtech"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Project 8: Book shop -->
+
+                <div class="project-card">
+                    <div class="project-header">📚</div>
+                    <div class="project-content">
+
+                        <h3 class="project-title">Online Book Shop (Buy &amp; Rent)</h3>
+
+                        <p class="project-desc">
+                            C# application where users can buy or rent books.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">Desktop App</span>
+                            <span class="project-tag">OOP</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/rabbi2580/Online-Book-Shop-Buy-Rent-Book"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
 
         </div>
+    </section>
 
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+        <div class="container">
+
+            <h2 class="section-title">
+                Education &amp; Certifications
+            </h2>
+
+            <div class="education">
+                <div class="edu-school">
+                    American International University-Bangladesh (AIUB)
+                </div>
+                <div class="edu-title">
+                    B.Sc. in Computer Science &amp; Engineering
+                </div>
+                <div class="edu-meta">
+                    Major: Information Systems | 2023 – 2026 | CGPA: 3.31
+                </div>
+            </div>
+
+            <div class="education">
+                <div class="edu-school">
+                    Cloudly Infotech Limited
+                </div>
+                <div class="edu-title">
+                    Code to Cloud: Practical DevOps with AWS
+                </div>
+                <div class="edu-meta">
+                    Certificate of Participation | March 2026
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
 
     <section id="contact">
-
         <div class="container">
 
             <h2 class="section-title">
@@ -922,7 +1091,8 @@
             </h2>
 
             <p style="color:#cbd5e1; margin-bottom:20px;">
-                I'm always open to interesting projects and collaborations.
+                I'm looking for entry-level AI/ML and software engineering roles,
+                and I'm always open to interesting projects and collaborations.
             </p>
 
             <div class="contact-links">
@@ -931,21 +1101,19 @@
                     📧 Email
                 </a>
 
-                <a href="tel:+8801882782736" class="contact-link">
-                    📞 Phone
-                </a>
-
                 <a
                     href="https://github.com/rabbi2580"
                     target="_blank"
+                    rel="noopener"
                     class="contact-link"
                 >
                     💻 GitHub
                 </a>
 
                 <a
-                    href="https://www.linkedin.com/in/tarif-ul-haider-rabbi/"
+                    href="https://www.linkedin.com/in/haider-rabbi-2a55b5306/"
                     target="_blank"
+                    rel="noopener"
                     class="contact-link"
                 >
                     💼 LinkedIn
@@ -954,21 +1122,16 @@
             </div>
 
         </div>
-
     </section>
 
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
-
         <div class="container">
-
             <p>
-                © 2025 Tarif Ul Haider Rabbi | Based in Dhaka, Bangladesh
+                © 2026 Tarif Ul Haider Rabbi | Based in Dhaka, Bangladesh
             </p>
-
         </div>
-
     </footer>
 
 </body>
